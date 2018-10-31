@@ -14,6 +14,5 @@ namespace LinkedListExercise
             ls = ls.Reverse();
             ls.Print();
         }
-
     }
 }

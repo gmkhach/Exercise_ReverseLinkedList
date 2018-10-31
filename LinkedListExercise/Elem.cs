@@ -19,8 +19,8 @@ namespace LinkedListExercise
                 return this;
             }
 
-            // revers what current Elem is pointing at
-            var temp = next.Reverse();
+            // reverse what current Elem is pointing at
+            var reversedList = next.Reverse();
 
             // make the next Elem point at `this` 
             next.next = this;
@@ -28,26 +28,26 @@ namespace LinkedListExercise
             // set current Elem's pointer to null
             this.next = null;
 
-            return temp;
+            return reversedList;
         }
 
         public void Print()
         {
-            string output = string.Empty;
+            string outputString = string.Empty;
 
             // build the output string
             Elem temp = this;
             while(temp.next != null)
             {
-                output += $"{temp.val}, "; 
+                outputString += $"{temp.val}, "; 
                 temp = temp.next != null ? temp.next : temp;
             }
 
             // add the last value to output string
-            output += temp.val;
+            outputString += temp.val;
 
             // print the output string
-            Console.WriteLine(output);
+            Console.WriteLine(outputString);
         }
     }
 }
