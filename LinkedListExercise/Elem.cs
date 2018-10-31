@@ -31,16 +31,23 @@ namespace LinkedListExercise
             return temp;
         }
 
-        public string Print()
+        public void Print()
         {
-            if (next == null)
+            string output = string.Empty;
+
+            // build the output string
+            Elem temp = this;
+            while(temp.next != null)
             {
-                return val.ToString();
+                output += $"{temp.val}, "; 
+                temp = temp.next != null ? temp.next : temp;
             }
-            else
-            {
-                return $"{val.ToString()}, {next.Print()}";
-            }
+
+            // add the last value to output string
+            output += temp.val;
+
+            // print the output string
+            Console.WriteLine(output);
         }
     }
 }

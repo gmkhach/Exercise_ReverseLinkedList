@@ -12,7 +12,7 @@ namespace LinkedListExercise
         {
             Elem ls = new Elem { val = 1, next = new Elem { val = 2, next = new Elem { val = 3, next = null } } };
             ls = ls.Reverse();
-            Console.WriteLine(ls.Print());
+            ls.Print();
         }
 
     }
